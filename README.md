@@ -1,12 +1,3 @@
-<!--
-Get your module up and running quickly.
-
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: My Module
-- Package name: vue-dsfr-nuxt-module
-- Description: My new Nuxt module
--->
-
 # Module VueDsfr pour Nuxt
 
 [![npm version][npm-version-src]][npm-version-href]
@@ -16,16 +7,16 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 Ce module facilite l’utilisation de la bibliothèque VueDsfr dans un projet Nuxt 3.
 
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/vue-dsfr-nuxt-module?file=playground%2Fapp.vue) -->
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
+- [✨ Release Notes](/CHANGELOG.md)
+- [🏀 Online playground](https://stackblitz.com/github/laruiss/vue-dsfr-nuxt-module?file=playground%2Fapp.vue)
+- [📖 Documentation](https://docs.vue-ds.fr/nuxt)
 
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- 🪄 &nbsp;Imports automagique des imports des composables VueDsfr
-- 🪄 &nbsp;Imports automagique des imports des composants VueDsfr
-- ✨ &nbsp;Facilitation de l’utilisation des icônes de [Oh, Vue Icons](https://oh-vue-icons.netlify.app/)
+- 🪄 Imports automagiques des composables VueDsfr
+- 🪄 Imports automagiques des composants VueDsfr
+- ✨ Facilitation de l’utilisation des icônes de [Oh, Vue Icons](https://oh-vue-icons.netlify.app/)
 
 ## Configuration rapide
 
@@ -42,6 +33,8 @@ yarn add --dev vue-dsfr-nuxt-module
 npm i -D vue-dsfr-nuxt-module
 ```
 
+N.B. : Vous devriez déjà avoir les dépendances `@gouvminint/vue-dsfr` et `@gouvfr/dsfr`
+
 2. Ajouter `vue-dsfr-nuxt-module` dans la section `modules` de `nuxt.config.ts`
 
 ```ts{3}
@@ -54,7 +47,9 @@ export default defineNuxtConfig({
 
 3. Ajouter le CSS de DSFR dans la section `css` de `nuxt.config.ts`
 
-```ts{5-12}
+Rappel : Vous devriez déjà avoir les dépendances `@gouvminint/vue-dsfr` et `@gouvfr/dsfr`
+
+```ts{5-11}
 export default defineNuxtConfig({
   modules: [
     'vue-dsfr-nuxt-module'
@@ -62,17 +57,16 @@ export default defineNuxtConfig({
   css: [
     '@gouvfr/dsfr/dist/core/core.main.min.css',           // Le CSS minimal du DSFR
     '@gouvfr/dsfr/dist/component/component.main.min.css'  // Styles de tous les composants du DSFR
-    '@gouvfr/dsfr/dist/utility/utility.main.min.css'      // Classes utilitaires : les composants de VueDsfr en ont besoin
+    '@gouvfr/dsfr/dist/utility/utility.main.min.css'      // Classes utilitaires : les composants de VueDsfr en ont besoin, contient aussi les icônes
 
     '@gouvfr/dsfr/dist/scheme/scheme.min.css'             // Facultatif : Si les thèmes sont utilisés (thème sombre, thème en bernes)
-    '@gouvfr/dsfr/dist/utility/icons/icons.min.css',      // Facultatif : Si des icônes sont utilisées avec les classes "fr-icon-..."
   ],
 })
 ```
 
-4. Facultatif : ajouter les icônes à utiliser avec OhVueIcon
+4. Facultatif : ajouter des icônes à utiliser avec OhVueIcon
 
-```ts{5-12}
+```ts{12-18}
 import * as icons from './icons'
 
 export default defineNuxtConfig({
@@ -82,10 +76,9 @@ export default defineNuxtConfig({
   css: [
     '@gouvfr/dsfr/dist/core/core.main.min.css',           // Le CSS minimal du DSFR
     '@gouvfr/dsfr/dist/component/component.main.min.css'  // Styles de tous les composants du DSFR
-    '@gouvfr/dsfr/dist/utility/utility.main.min.css'      // Classes utilitaires : les composants de VueDsfr en ont besoin
+    '@gouvfr/dsfr/dist/utility/utility.main.min.css'      // Classes utilitaires : les composants de VueDsfr en ont besoin, contient aussi les icônes
 
     '@gouvfr/dsfr/dist/scheme/scheme.min.css'             // Facultatif : Si les thèmes sont utilisés (thème sombre, thème en bernes)
-    '@gouvfr/dsfr/dist/utility/icons/icons.min.css',      // Facultatif : Si des icônes sont utilisées avec les classes "fr-icon-..."
   ],
   runtimeConfig: {
     public: {
@@ -96,6 +89,8 @@ export default defineNuxtConfig({
   },
 })
 ```
+
+Et ajouter un fichier `icons.ts` à la racine dans lequel sont réexportées depuis `'oh-vue-icons/icons'` les icônes utilisées :
 
 ```ts
 export {
