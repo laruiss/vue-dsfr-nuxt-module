@@ -28,7 +28,7 @@ jobs:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm ci
+      - run: npm ci --legacy-peer-deps
         if: ${{ steps.release.outputs.release_created }}
       - run: npm run dev:prepare
         if: ${{ steps.release.outputs.release_created }}
