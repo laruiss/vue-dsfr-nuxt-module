@@ -14,7 +14,6 @@ export default defineNuxtConfig({
     '@gouvfr/dsfr/dist/component/component.main.min.css',
     '@gouvfr/dsfr/dist/utility/utility.main.min.css',
     '@gouvfr/dsfr/dist/scheme/scheme.min.css',
-    '@gouvfr/dsfr/dist/utility/icons/icons.main.min.css',
   ],
   modules: ['../src/module'],
   devtools: { enabled: true }
