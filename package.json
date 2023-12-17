@@ -22,7 +22,7 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish --access public && git push --follow-tags",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen && npm publish --access public && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
@@ -44,11 +44,11 @@
     "@nuxt/module-builder": "^0.5.4",
     "@nuxt/schema": "^3.8.2",
     "@nuxt/test-utils": "^3.8.1",
-    "@types/node": "^20.10.3",
+    "@types/node": "^20.10.4",
     "changelogen": "^0.5.5",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "nuxt": "^3.8.2",
     "vite": "^5.0.10",
-    "vitest": "^0.33.0"
+    "vitest": "^1.0.4"
   }
 }
