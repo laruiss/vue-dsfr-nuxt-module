@@ -1,4 +1,4 @@
-import { defineNuxtPlugin } from '#app'
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 import { OhVueIcon, addIcons } from 'oh-vue-icons'
 
