@@ -5,8 +5,6 @@ import { addIcons, type IconType } from 'oh-vue-icons'
 export default defineNuxtPlugin((nuxtApp) => {
   const options = useRuntimeConfig()
 
-  import('@gouvminint/vue-dsfr/styles')
-
   //#region Handle oh-vue-icons
   // Get the icons option from the runtime config
   const userIcons: Record<string, IconType> | IconType[] | undefined = options.public.vueDsfr.icons

@@ -1,6 +1,6 @@
 {
   "name": "vue-dsfr-nuxt-module",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Module Nuxt 3 pour VueDsfr",
   "repository": {
     "type": "git",
@@ -31,9 +31,9 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.8.2",
-    "@gouvfr/dsfr": "^1.11.0",
-    "@gouvminint/vue-dsfr": "^5.5.0",
+    "@gouvfr/dsfr": "^1.11.2",
+    "@gouvminint/vue-dsfr": "^5.10.3",
+    "@nuxt/kit": "^3.11.1",
     "oh-vue-icons": "^1.0.0-rc3"
   },
   "peerDependencies": {
@@ -44,14 +44,14 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/eslint-config": "^0.2.0",
-    "@nuxt/module-builder": "^0.5.4",
-    "@nuxt/schema": "^3.8.2",
-    "@nuxt/test-utils": "^3.8.1",
-    "@types/node": "^20.10.4",
+    "@nuxt/module-builder": "^0.5.5",
+    "@nuxt/schema": "^3.11.1",
+    "@nuxt/test-utils": "^3.12.0",
+    "@types/node": "^20.12.2",
     "changelogen": "^0.5.5",
-    "eslint": "^8.56.0",
-    "nuxt": "^3.8.2",
-    "vite": "^5.0.10",
-    "vitest": "^1.0.4"
+    "eslint": "^8.57.0",
+    "nuxt": "^3.11.1",
+    "vite": "^5.2.7",
+    "vitest": "^1.4.0"
   }
 }
