@@ -32,7 +32,9 @@ export default defineNuxtModule<ModuleOptions>({
       addImports({ name, as: name, from: '@gouvminint/vue-dsfr' }) // Ajoute les imports automatiques des composables
     }
 
-}
+    addComponent({ name: 'VIcon', export: 'OhVueIcon', filePath: 'oh-vue-icons' })
+    addComponent({ name: 'OhVueIcon', export: 'OhVueIcon', filePath: 'oh-vue-icons' })
+  }
 })
 
 

@@ -1,25 +1,29 @@
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
-import { OhVueIcon, addIcons } from 'oh-vue-icons'
+import { addIcons, type IconType } from 'oh-vue-icons'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const options = useRuntimeConfig()
 
-  nuxtApp.vueApp.component('VIcon', OhVueIcon)
-  nuxtApp.vueApp.component('OhVueIcon', OhVueIcon)
-
   import('@gouvminint/vue-dsfr/styles')
 
-  if (!options.public.vueDsfr.icons) {
+  //#region Handle oh-vue-icons
+  // Get the icons option from the runtime config
+  const userIcons: Record<string, IconType> | IconType[] | undefined = options.public.vueDsfr.icons
+  // If the icons option is not set, do nothing
+  if (!userIcons) {
     return
   }
 
-  if (Array.isArray(options.public.vueDsfr.icons)) {
-    addIcons(...options.public.vueDsfr.icons)
+  // If the icons option is an array, add all icons
+  if (Array.isArray(userIcons)) {
+    addIcons(...userIcons)
     return
   }
 
-  if (typeof options.public.vueDsfr.icons === 'object') {
-    addIcons(...Object.values(options.public.vueDsfr.icons))
+  // If the icons option is an object, add all values
+  if (typeof userIcons === 'object') {
+    addIcons(...Object.values(userIcons))
   }
+  //#endregion
 })

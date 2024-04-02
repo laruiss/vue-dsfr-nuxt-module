@@ -16,6 +16,7 @@ Ce module facilite l’utilisation de la bibliothèque VueDsfr dans un projet Nu
 <!-- Highlight some of the features your module provide here -->
 - 🪄 Imports automagiques des composables VueDsfr
 - 🪄 Imports automagiques des composants VueDsfr
+- 🪄 Import automagique du composant VIcon (ou OhVueIcon)
 - ✨ Facilitation de l’utilisation des icônes de [Oh, Vue Icons](https://oh-vue-icons.netlify.app/)
 
 ## Configuration rapide
@@ -64,9 +65,9 @@ export default defineNuxtConfig({
 })
 ```
 
-4. Facultatif : ajouter des icônes à utiliser avec OhVueIcon
+4. Facultatif : ajouter des icônes à utiliser avec [`OhVueIcon`](https://oh-vue-icons.js.org/)
 
-```ts
+```ts{1}
 import * as icons from './icons'
 
 export default defineNuxtConfig({
