@@ -7,7 +7,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   //#region Handle oh-vue-icons
   // Get the icons option from the runtime config
-  const userIcons: Record<string, IconType> | IconType[] | undefined = options.public.vueDsfr.icons
+  const userIcons: Record<string, IconType> | IconType[] | undefined = options.public?.vueDsfr?.icons
   // If the icons option is not set, do nothing
   if (!userIcons) {
     return
