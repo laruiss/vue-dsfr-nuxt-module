@@ -31,15 +31,13 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@gouvfr/dsfr": "^1.11.2",
-    "@gouvminint/vue-dsfr": "^5.10.3",
-    "@nuxt/kit": "^3.11.1",
-    "oh-vue-icons": "^1.0.0-rc3"
+    "@gouvfr/dsfr": "~1.12.1",
+    "@gouvminint/vue-dsfr": "^6.0.0",
+    "@nuxt/kit": "^3.11.1"
   },
   "peerDependencies": {
-    "@gouvfr/dsfr": "^1.11.0",
-    "@gouvminint/vue-dsfr": "^5.5.0",
-    "oh-vue-icons": "^1.0.0-rc3"
+    "@gouvfr/dsfr": "~1.12.0",
+    "@gouvminint/vue-dsfr": "^6.0.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
