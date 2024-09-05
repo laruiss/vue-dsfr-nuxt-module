@@ -10,18 +10,15 @@ export default defineNuxtModule<ModuleOptions>({
   },
   // Default configuration options of the Nuxt module
   defaults: {},
-  setup (options, nuxt) {
+  setup (/*options, nuxt*/) {
     const resolver = createResolver(import.meta.url)
-
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
 
     // Code pour intégrer `@gouvminint/vue-dsfr`
     for (const name in components) {
       if (name === 'default') {
         continue
       }
-      if (name.startsWith('Dsfr')) { // Les composants de `@gouvminint/vue-dsfr` commencent par `Dsfr`
+      if (name.startsWith('Dsfr') || name === 'VIcon') { // Les composants de `@gouvminint/vue-dsfr` commencent par `Dsfr`
         addComponent({ // add component
           name,
           export: name,
@@ -31,8 +28,7 @@ export default defineNuxtModule<ModuleOptions>({
       }
       addImports({ name, as: name, from: '@gouvminint/vue-dsfr' }) // Ajoute les imports automatiques des composables
     }
-
-}
+  }
 })
 
 

@@ -15,8 +15,8 @@ Ce module facilite l’utilisation de la bibliothèque VueDsfr dans un projet Nu
 
 <!-- Highlight some of the features your module provide here -->
 - 🪄 Imports automagiques des composables VueDsfr
-- 🪄 Imports automagiques des composants VueDsfr
-- ✨ Facilitation de l’utilisation des icônes de [Oh, Vue Icons](https://oh-vue-icons.netlify.app/)
+- 🪄 Imports automagiques des composants VueDsfr (inclus le composant VIcon)
+- ✨ Facilitation de l’utilisation des icônes de [@iconify/vue](https://iconify.design/docs/icon-components/vue/)
 
 ## Configuration rapide
 
@@ -62,41 +62,6 @@ export default defineNuxtConfig({
     '@gouvfr/dsfr/dist/scheme/scheme.min.css',            // Facultatif : Si les thèmes sont utilisés (thème sombre, thème en bernes)
   ],
 })
-```
-
-4. Facultatif : ajouter des icônes à utiliser avec OhVueIcon
-
-```ts
-import * as icons from './icons'
-
-export default defineNuxtConfig({
-  modules: [
-    'vue-dsfr-nuxt-module'
-  ],
-  css: [
-    '@gouvfr/dsfr/dist/core/core.main.min.css',           // Le CSS minimal du DSFR
-    '@gouvfr/dsfr/dist/component/component.main.min.css', // Styles de tous les composants du DSFR
-    '@gouvfr/dsfr/dist/utility/utility.main.min.css',     // Classes utilitaires : les composants de VueDsfr en ont besoin, contient aussi les icônes
-
-    '@gouvfr/dsfr/dist/scheme/scheme.min.css',            // Facultatif : Si les thèmes sont utilisés (thème sombre, thème en bernes)
-  ],
-  runtimeConfig: {
-    public: {
-      vueDsfr: {
-        icons: Object.values(icons),
-      },
-    },
-  },
-})
-```
-
-Et ajouter un fichier `icons.ts` à la racine dans lequel sont réexportées depuis `'oh-vue-icons/icons'` les icônes utilisées :
-
-```ts
-export {
-  RiFlagLine,
-  RiHome2Line,
-} from 'oh-vue-icons/icons'
 ```
 
 Et voilà ! Vous êtes prêts à utiliser VueDsfr dans votre app Nuxt ✨
