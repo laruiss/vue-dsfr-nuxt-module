@@ -1,14 +1,3 @@
-<template>
-  <DsfrHeader
-    :service-title="'serviceTitle'"
-    :service-description="'serviceDescription'"
-    :logo-text="'logoText'"
-    :quick-links="quickLinks"
-    show-search
-  />
-  <NuxtPage />
-</template>
-
 <script setup lang="ts">
 useScheme()
 
@@ -25,3 +14,14 @@ const quickLinks = [
   },
 ]
 </script>
+
+<template>
+  <DsfrHeader
+    service-title="serviceTitle"
+    service-description="serviceDescription"
+    logo-text="logoText"
+    :quick-links="quickLinks"
+    show-search
+  />
+  <NuxtPage />
+</template>
