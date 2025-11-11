@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/laruiss/vue-dsfr-nuxt-module/compare/v2.0.0...v3.0.0) (2025-11-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* **nuxt4:** Nuxt 4 uniquement (>=4.0.0)
+
+### Features
+
+* **nuxt4:** 🚀 migration vers Nuxt 4 avec support exclusif ([6c0d6ee](https://github.com/laruiss/vue-dsfr-nuxt-module/commit/6c0d6eedc340a4e090898d842ec4a121a96f26b7)), closes [#24](https://github.com/laruiss/vue-dsfr-nuxt-module/issues/24)
+
 ## [2.0.0](https://github.com/laruiss/vue-dsfr-nuxt-module/compare/v1.0.0...v2.0.0) (2024-09-05)
 
 ### ⚠ BREAKING CHANGES
