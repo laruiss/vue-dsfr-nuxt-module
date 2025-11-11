@@ -8,5 +8,8 @@ export default defineNuxtConfig({
     '@gouvfr/dsfr/dist/scheme/scheme.min.css',
   ],
   modules: ['../src/module'],
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  vueDsfr: {
+    enabled: true
+  }
 })

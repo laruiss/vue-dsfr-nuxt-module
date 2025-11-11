@@ -1,11 +1,13 @@
-# Module VueDsfr pour Nuxt
+# Module VueDsfr pour Nuxt 4
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-Ce module facilite l’utilisation de la bibliothèque VueDsfr dans un projet Nuxt 3.
+Ce module facilite l'utilisation de la bibliothèque VueDsfr dans un projet Nuxt 4.
+
+**⚠️ Version 3.x+ cible uniquement Nuxt 4. Pour Nuxt 3, utilisez la version 2.x**
 
 - [✨ Release Notes](/CHANGELOG.md)
 - [🏀 Online playground](https://stackblitz.com/github/laruiss/vue-dsfr-nuxt-module?file=playground%2Fapp.vue)
@@ -47,24 +49,52 @@ export default defineNuxtConfig({
 
 3. Ajouter le CSS de DSFR dans la section `css` de `nuxt.config.ts`
 
-Rappel : Vous devriez déjà avoir les dépendances `@gouvminint/vue-dsfr` et `@gouvfr/dsfr`
-
 ```ts
 export default defineNuxtConfig({
   modules: [
     'vue-dsfr-nuxt-module'
   ],
   css: [
-    '@gouvfr/dsfr/dist/core/core.main.min.css',           // Le CSS minimal du DSFR
+    '@gouvfr/dsfr/dist/core/core.main.min.css', // Le CSS minimal du DSFR
     '@gouvfr/dsfr/dist/component/component.main.min.css', // Styles de tous les composants du DSFR
-    '@gouvfr/dsfr/dist/utility/utility.main.min.css',     // Classes utilitaires : les composants de VueDsfr en ont besoin, contient aussi les icônes
-
-    '@gouvfr/dsfr/dist/scheme/scheme.min.css',            // Facultatif : Si les thèmes sont utilisés (thème sombre, thème en bernes)
+    '@gouvfr/dsfr/dist/utility/utility.main.min.css', // Classes utilitaires : les composants de VueDsfr en ont besoin, contient aussi les icônes
+    '@gouvfr/dsfr/dist/scheme/scheme.min.css', // Facultatif : Si les thèmes sont utilisés (thème sombre, thème en bernes)
   ],
 })
 ```
 
-Et voilà ! Vous êtes prêts à utiliser VueDsfr dans votre app Nuxt ✨
+## Configuration
+
+Le module peut être configuré avec les options suivantes :
+
+```ts
+export default defineNuxtConfig({
+  modules: [
+    'vue-dsfr-nuxt-module'
+  ],
+  vueDsfr: {
+    // Activer ou désactiver le module (défaut: true)
+    enabled: true
+  }
+})
+```
+
+### Options disponibles
+
+| Option | Type | Défaut | Description |
+|--------|------|--------|-------------|
+| `enabled` | `boolean` | `true` | Active ou désactive le module |
+
+## Migration depuis Nuxt 3
+
+Si vous migrez depuis Nuxt 3 et la version 2.x du module :
+
+1. Mettez à jour vers Nuxt 4
+2. Installez la version 3.x du module : `npm i -D vue-dsfr-nuxt-module@3`
+3. Mettez à jour vos dépendances VueDsfr vers les dernières versions
+4. Aucun autre changement de configuration n'est nécessaire !
+
+Et voilà ! Vous êtes prêts à utiliser VueDsfr dans votre app Nuxt 4 ✨
 
 ## Development
 

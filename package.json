@@ -1,13 +1,13 @@
 {
   "name": "vue-dsfr-nuxt-module",
-  "version": "2.0.0",
-  "description": "Module Nuxt 3 pour VueDsfr",
+  "type": "module",
+  "version": "3.0.0",
+  "description": "Module Nuxt 4 pour VueDsfr",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laruiss/vue-dsfr-nuxt-module.git"
   },
-  "license": "MIT",
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
@@ -27,29 +27,31 @@
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "npm run lint && npm run prepack && changelogen && npm publish --access public && git push --follow-tags",
     "lint": "eslint .",
+    "format": "eslint . --fix",
     "test": "vitest run",
     "test:watch": "vitest watch"
   },
-  "dependencies": {
-    "@gouvfr/dsfr": "~1.12.1",
-    "@gouvminint/vue-dsfr": "^6.0.0",
-    "@nuxt/kit": "^3.11.1"
-  },
   "peerDependencies": {
-    "@gouvfr/dsfr": "~1.12.0",
-    "@gouvminint/vue-dsfr": "^6.0.0"
+    "@gouvfr/dsfr": "~1.14.2",
+    "@gouvminint/vue-dsfr": "^8.11.0"
+  },
+  "dependencies": {
+    "@gouvfr/dsfr": "~1.14.2",
+    "@gouvminint/vue-dsfr": "^8.11.0",
+    "@nuxt/kit": "^4.2.1"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^6.2.0",
     "@nuxt/devtools": "latest",
-    "@nuxt/eslint-config": "^0.2.0",
-    "@nuxt/module-builder": "^0.5.5",
-    "@nuxt/schema": "^3.11.1",
-    "@nuxt/test-utils": "^3.12.0",
-    "@types/node": "^20.12.2",
-    "changelogen": "^0.5.5",
-    "eslint": "^8.57.0",
-    "nuxt": "^3.11.1",
-    "vite": "^5.2.7",
-    "vitest": "^1.4.0"
+    "@nuxt/eslint-config": "^1.10.0",
+    "@nuxt/module-builder": "^1.0.2",
+    "@nuxt/schema": "^4.2.1",
+    "@nuxt/test-utils": "^3.20.1",
+    "@types/node": "^22.19.0",
+    "changelogen": "^0.6.2",
+    "eslint": "^9.39.1",
+    "nuxt": "^4.2.1",
+    "vite": "^7.2.2",
+    "vitest": "^4.0.8"
   }
 }
