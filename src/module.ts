@@ -23,7 +23,7 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     enabled: true
   },
-  setup (options /*, nuxt*/) {
+  setup (options /* , nuxt*/) {
     const logger = useLogger('vue-dsfr')
 
     // Skip if disabled
@@ -51,7 +51,8 @@ export default defineNuxtModule<ModuleOptions>({
           filePath: '@gouvminint/vue-dsfr',
         })
         componentCount++
-      } else {
+      }
+      else {
         // Ajoute les imports automatiques des composables
         addImports({
           name,

@@ -35,6 +35,7 @@ npm format              # Corriger automatiquement ESLint
   - Corps commençant par Fixes avec référence à l'issue
   - Description détaillée du problème et de la solution
   - Branche cible : `main` (sauf exceptions)
+  - Créer la PR via GitKraken MCP Server
 
 ### Qualité du code et commits
 
