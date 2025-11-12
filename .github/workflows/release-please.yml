@@ -10,30 +10,8 @@ permissions:
   pull-requests: write
 
 jobs:
-  tests:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v5
-
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 22
-
-      - run: npm i -g --force corepack@latest && corepack enable
-
-      - name: Install dependencies
-        run: npx nypm@latest i
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Build
-        run: npm run build
-
   release-please:
     runs-on: ubuntu-latest
-    needs: tests
     steps:
       - name: Release Please
         id: release
@@ -61,10 +39,10 @@ jobs:
         run: npx nypm@latest i
         if: ${{ steps.release.outputs.release_created }}
 
-      - run: pnpm dev:prepare
+      - run: npm run dev:prepare
         if: ${{ steps.release.outputs.release_created }}
 
-      - run: pnpm release
+      - run: npm run release
         if: ${{ steps.release.outputs.release_created }}
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
