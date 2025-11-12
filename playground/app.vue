@@ -12,6 +12,11 @@ const quickLinks = [
     to: '/apropos',
     icon: 'ri-flag-line',
   },
+  {
+    label: 'Onglets',
+    to: '/tabs',
+    icon: 'ri-list-check-2',
+  },
 ]
 </script>
 
