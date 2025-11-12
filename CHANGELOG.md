@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.1.2
+
+[compare changes](https://github.com/laruiss/vue-dsfr-nuxt-module/compare/v3.1.1...v3.1.2)
+
 ## v3.1.1
 
 [compare changes](https://github.com/laruiss/vue-dsfr-nuxt-module/compare/v3.1.0...v3.1.1)
