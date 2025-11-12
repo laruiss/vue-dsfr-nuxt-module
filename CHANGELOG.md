@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.1.0](https://github.com/laruiss/vue-dsfr-nuxt-module/compare/v3.0.0...v3.1.0) (2025-11-12)
+
+
+### Features
+
+* **ci:** 🚀 amélioration workflow CI et configuration projet ([170978d](https://github.com/laruiss/vue-dsfr-nuxt-module/commit/170978d027bfc83fe3eff4d056c470913c9d5a31)), closes [#29](https://github.com/laruiss/vue-dsfr-nuxt-module/issues/29)
+
+
+### Bug Fixes
+
+* **ci:** remplacer script build par prepack et ajouter workflow CI ([ff670ae](https://github.com/laruiss/vue-dsfr-nuxt-module/commit/ff670ae55d13649f675dee13d246beafb1528bca)), closes [#33](https://github.com/laruiss/vue-dsfr-nuxt-module/issues/33)
+* **config:** 🔧 correction configuration TypeScript pour module Nuxt 4 ([3dc10f2](https://github.com/laruiss/vue-dsfr-nuxt-module/commit/3dc10f28a349a6fdeef6ee30d64e55603569a23d)), closes [#27](https://github.com/laruiss/vue-dsfr-nuxt-module/issues/27)
+
 ## [3.0.0](https://github.com/laruiss/vue-dsfr-nuxt-module/compare/v2.0.0...v3.0.0) (2025-11-11)
 
 
