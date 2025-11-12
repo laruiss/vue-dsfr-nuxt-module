@@ -1,7 +1,7 @@
 {
   "name": "vue-dsfr-nuxt-module",
   "type": "module",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Module Nuxt 4 pour VueDsfr",
   "license": "MIT",
   "repository": {
